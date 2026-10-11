@@ -1,0 +1,12 @@
+{"event": "boot", "firmware": "sensor-node-1.0.0"}
+{"pressure_bar": 0.0, "volts": 0.0, "raw": 0}
+{"pressure_bar": 1.001, "volts": 0.33, "raw": 410}
+{"pressure_bar": 2.0, "volts": 0.66, "raw": 819}
+{"pressure_bar": 2.999, "volts": 0.99, "raw": 1228}
+{"pressure_bar": 4.0, "volts": 1.32, "raw": 1638}
+{"pressure_bar": 5.001, "volts": 1.65, "raw": 2048}
+{"pressure_bar": 6.0, "volts": 1.98, "raw": 2457}
+{"pressure_bar": 6.999, "volts": 2.31, "raw": 2866}
+{"pressure_bar": 8.0, "volts": 2.64, "raw": 3276}
+{"pressure_bar": 9.001, "volts": 2.97, "raw": 3686}
+{"pressure_bar": 10.0, "volts": 3.3, "raw": 4095}
