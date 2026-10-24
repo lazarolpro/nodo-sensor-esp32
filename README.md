@@ -1,7 +1,7 @@
 # Capa 4 — I+D y prototipado (firmware + electrónica)
 
 [![CI](https://github.com/lazarolpro/nodo-sensor-esp32/actions/workflows/ci.yml/badge.svg)](https://github.com/lazarolpro/nodo-sensor-esp32/actions/workflows/ci.yml)
-[`lazarolpro/nodo-sensor-esp32`](https://github.com/lazarolpro/nodo-sensor-esp32) · parte del [portafolio de 6 capacidades](https://github.com/lazarolpro/portafolio)
+[`lazarolpro/nodo-sensor-esp32`](https://github.com/lazarolpro/nodo-sensor-esp32) · parte del [portafolio de 9 capacidades](https://github.com/lazarolpro/portafolio)
 
 **Capacidad demostrada:** llevar una idea a un prototipo de firmware ejecutable y
 **verificable online** sin necesidad de hardware físico.
@@ -47,3 +47,6 @@ Arduino/ESP32 (C++), Wokwi (simulación), Python 3 (simulador de banco).
 
 Demuestra **I+D y prototipado** con costo cero de hardware: de la idea a una
 demo funcional y compartible en el navegador.
+
+**En mantenimiento:** prototipar un sensor o un lazo de control antes de comprar
+el hardware definitivo.
