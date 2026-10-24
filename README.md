@@ -1,52 +1,52 @@
-# Capa 4 — I+D y prototipado (firmware + electrónica)
+# Capa 4 — I+D y prototipado (firmware)
 
-[![CI](https://github.com/lazarolpro/nodo-sensor-esp32/actions/workflows/ci.yml/badge.svg)](https://github.com/lazarolpro/nodo-sensor-esp32/actions/workflows/ci.yml)
 [`lazarolpro/nodo-sensor-esp32`](https://github.com/lazarolpro/nodo-sensor-esp32) · parte del [portafolio de 9 capacidades](https://github.com/lazarolpro/portafolio)
 
 **Capacidad demostrada:** llevar una idea a un prototipo de firmware ejecutable y
-**verificable online** sin necesidad de hardware físico.
+simulable, sin gastar en hardware.
+
+> © 2026 Ronny L. Díaz López. **Todos los derechos reservados.** El código fuente,
+> los datos de detalle y los informes completos son propiedad del autor y no se
+> publican. Prohibida su venta o uso comercial sin autorización escrita. Ver
+> [`LICENSE`](LICENSE).
 
 ## Problema real
 
-Prototipar electrónica suele requerir comprar componentes y montar un banco. Aquí
-el prototipo corre en un simulador gratuito y deja la evidencia en el repo.
+Prototipar un nodo sensor suele exigir comprar componentes y montar el circuito
+para saber si la idea funciona. Con firmware + simulación se valida el lazo
+sensor → conversión → publicación antes de invertir.
 
 ## Qué hace
 
-- Firmware para ESP32 que lee un sensor analógico y publica una lectura JSON.
-- Diagrama de Wokwi (`wokwi/diagram.json`) para ejecutarlo en el navegador gratis.
-- Simulador local en Python que replica la misma matemática, para generar
-  evidencia aunque no haya placa ni simulador.
-
-## Cómo ejecutar
-
-Simulador local (sin hardware):
-
-```bash
-python sim/sensor_sim.py --samples 5 --value 6.5
-python sim/sensor_sim.py --sweep
-```
-
-En Wokwi (gratis, en el navegador):
-
-1. Abre <https://wokwi.com/projects/new/esp32>.
-2. Pega `firmware/main.ino` y el `wokwi/diagram.json`.
-3. Pulsa *Start* y observa el monitor serie.
+- Lee un sensor analógico de presión en un **ESP32** y lo convierte a unidades de
+  ingeniería.
+- Publica lecturas estructuradas (JSON) listas para integrar.
+- Simula la curva completa (presión → tensión → ADC) sin hardware.
 
 ## Evidencia que produce
 
-- `firmware/main.ino` — firmware comentado y compilable.
-- `wokwi/diagram.json` — circuito reproducible online.
-- Salida JSON determinista del simulador local.
+- [`assets/muestra_sensor.pdf`](assets/muestra_sensor.pdf) — muestra resumida con
+  el barrido de calibración del sensor (con marca de agua).
+- [`sim/sample_output.jsonl`](sim/sample_output.jsonl) — salida de la simulación
+  (lecturas del barrido).
+- [`wokwi/diagram.json`](wokwi/diagram.json) — esquema del circuito simulado.
+
+## Alcance de este repositorio
+
+Este repositorio es una **vitrina del resultado**: muestra el barrido de
+calibración, la salida de la simulación y el esquema del circuito. El **firmware
+fuente**, el **código de simulación** y los **informes completos** son propiedad
+del autor y se mantienen fuera del repositorio público.
 
 ## Stack
 
-Arduino/ESP32 (C++), Wokwi (simulación), Python 3 (simulador de banco).
+ESP32/Arduino (C++) y simulación con Python 3. *(El código no se publica; ver
+`LICENSE`.)*
 
 ## Por qué le importa a la empresa
 
 Demuestra **I+D y prototipado** con costo cero de hardware: de la idea a una
-demo funcional y compartible en el navegador.
+demo funcional y compartible.
 
 **En mantenimiento:** prototipar un sensor o un lazo de control antes de comprar
 el hardware definitivo.
