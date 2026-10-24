@@ -23,8 +23,17 @@ sensor → conversión → publicación antes de invertir.
 - Publica lecturas estructuradas (JSON) listas para integrar.
 - Simula la curva completa (presión → tensión → ADC) sin hardware.
 
+## Demo visual
+
+![Barrido de calibración del sensor (presión → tensión → ADC)](assets/sensor_demo.gif)
+
+La animación dibuja el barrido completo presión → tensión → ADC. Video completo:
+[`assets/sensor_demo.mp4`](assets/sensor_demo.mp4).
+
 ## Evidencia que produce
 
+- `assets/sensor_demo.mp4`, `sensor_demo.gif`, `sensor_demo_poster.png` — demo visual
+  animado (con miniatura).
 - [`assets/muestra_sensor.pdf`](assets/muestra_sensor.pdf) — muestra resumida con
   el barrido de calibración del sensor (con marca de agua).
 - [`sim/sample_output.jsonl`](sim/sample_output.jsonl) — salida de la simulación
